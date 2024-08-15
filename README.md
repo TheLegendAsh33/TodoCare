@@ -39,20 +39,11 @@ Make sure you have the following installed:
     ```bash
     npm install
     ```
-4. Set up environment variables:
-   - Create a `.env` file in the root directory and add your MongoDB connection string and email service credentials.
-   - Example:
-    ```env
-    MONGODB_URI=your_mongodb_connection_string
-    EMAIL_SERVICE=your_email_service
-    EMAIL_USER=your_email_user
-    EMAIL_PASS=your_email_password
-    ```
-5. Start the development server:
+4. Start the development server:
     ```bash
     npm start
     ```
-6. Open your browser and visit `http://localhost:3000`.
+5. Open your browser and visit `http://localhost:3000`.
 
 ## Usage
 
