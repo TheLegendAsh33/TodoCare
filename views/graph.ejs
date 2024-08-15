@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Progress Graph | TodoCare</title>
+    <link rel="stylesheet" href="/graph.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <%- include('includes/nav') %>
+    <h1>Your Progress</h1>
+    <canvas id="timeGraph" style="height:40vh; width:80vw"></canvas>
+    <script>
+            const data = <%- JSON.stringify(data) %>;
+      const labels = data.map(item => item.task);
+      const times = data.map(item => item.timeTaken);
+
+      console.log('Labels:', labels);
+      console.log('Times:', times);
+
+
+            const ctx = document.getElementById("timeGraph").getContext("2d");
+            new Chart(ctx, {
+              type: "bar",
+              data: {
+                labels: labels, 
+                datasets: [
+                  {
+                    label: "Sample Time Taken (minutes)",
+                    data: times, 
+                    backgroundColor: "#003049",
+                  },
+                ],
+              },
+            });
+    </script>
+  </body>
+</html>

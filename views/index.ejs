@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TodoCare</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <%- include('includes/nav') %>
+    <div id="add">
+      <form action="/add" method="POST">
+        <input type="text" name="task" placeholder="Add new task" />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <ul id="mainTask">
+      <% todos.forEach(todo => { %>
+      <li id="task">
+        <span><%= todo.task %></span>
+        <div id="todobtn">
+          <% if (!todo.completed) { %>
+          <form action="/complete/<%= todo._id %>" method="POST">
+            <button type="submit">Complete</button>
+          </form>
+          <% } else { %>
+          <span>Completed in <%= todo.timeTaken %> minutes</span>
+          <% } %>
+          <form action="/delete/<%= todo._id %>" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+    <div id="g">
+      <button><a href="/graph">View Progress Graph</a></button>
+    </div>
+    
+  </body>
+</html>

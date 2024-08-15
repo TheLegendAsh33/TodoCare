@@ -1,0 +1,64 @@
+body {
+  background-color: #65CCB8;
+}
+
+#mainTask {
+  list-style-type: none;
+  margin: 0% 20% 0% 20%;
+  padding: 0% 5% 0% 5%;
+  border: solid black 2px;
+  background-color: #57BA98;
+}
+
+#task {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  display: inline;
+}
+
+input {
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 15px 5px 15px;
+}
+
+#add {
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add button {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  background-color: #3B945E;
+  color: #F2F2F2;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#g {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+#g button {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  background-color: #3B945E;
+}
+
+#g button a {
+  color: #F2F2F2;
+  text-decoration: none;
+}
